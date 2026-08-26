@@ -1,32 +1,137 @@
+<!-- AULA SOBRE FORMULÁRIOS -->
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mim...</title>
+    <title>Formulários</title>
 </head>
 <body>
-    <h1>Lívia Miyuki Motoki</h1>
-    <p>Atualmente tenho 17 anos, moro em São Caetano do Sul, estou no último ano do ensino médio e não trabalho.</p>
-    <p>⤷ Toda minha família é descendente de japoneses, onde os meus bisavós por parte de pai vieram do Japão e meu avô por parte de mãe também. Temos nomes compostos, sendo o primeiro nome brasileiro e o segundo japonês. Meu nome japonês é Miyuki, do meu irmão é Yukio, do meu pai é Takashi.</p>
-    <img src="./imagens/liv photo.jpg" alt="foto com meu pai" width="210px">
-    <img src="./imagens/livia photo.jpg" alt="foto com minha mãe e meu irmão" width="90px">
-    <hr>
-    <h2>Conhecimentos:</h2>
-    <p>Já tive contato com a <strong>programação</strong> no ano passado e fiz networking com pessoas incríveis, inclusive conheci comunidades como o <em>Python Floripa</em> e as <em>Pyladies</em> em eventos e fui ao <em>Festival SGB</em> que teve na <em>ACATE</em> em Florianópolis ano passado com o Senac, que se tornou um patrocinador.
-    Também fiz um ano desse mesmo curso no senai de Palhoça- Santa Catarina e conheci pessoas e profissionais muito bons, lá tive matérias diferentes como eletrônica; acabei optando por refazer o curso do zero aqui, por ter outras matérias e repraticar tudo.
-    No Senai de Santa Catarina vi as matérias de: Lógica de Programação, Back-End, Front-End, Eletrônica, Banco de Dados (Postgree) e React Native. 
-    </p>
-    <hr>
-    <ul>
-        <li><a href="./segunda_pagina.html">Ir para área de cursos</a></li>
-    </ul>
-    
-</body>
-<style>
-    body {
-        background-color: pink;
-    };
+    <h1>Criando nosso primeiro formulário</h1>
+    <form>
+        <label for="nome">Nome:</label>
+        <!-- Nome: [___input__] -->
+         <!-- ⤷ label -->
+        <input type="text"
+        id="nome"
+        name= "nome"
+        placeholder="Digite aqui o seu nome" 
+        required> <!-- obrigatório -->
+        <br>
 
-</style>
+        <label for="email">Email:</label>
+        <input
+        type="email"
+        id="nome"
+        name="email"
+        placeholder="nome@email.com"
+        required>
+        <br>
+
+        <label for="senha">Senha:</label>
+        <input 
+        type="password"
+        id="senha"
+        name="senha"
+        placeholder="Digite sua senha"
+        required>
+        <br>
+
+        <label for="idade">Idade:</label>
+        <input 
+        type="number"
+        min="14"
+        max="99"
+        name="idade"
+        placeholder="Digite sua idade"
+        required>
+        <br>
+
+        <label for="">Data de Nascimento:</label>
+        <input 
+        type="date"
+        id="nascimento"
+        name="nascimento"
+        required>
+        <br>
+
+        <input 
+        type="tel"
+        id="telefone"
+        name="telefone"
+        placeholder="(11)99999-9999"
+        required>
+        <br>
+
+        <label for="">Foto:</label>
+        <input
+        type="file"
+        id="foto"
+        name="foto"
+        > <!-- não obrigatório -->
+        <br>
+
+        <p>Turno preferido:</p>
+            <input 
+            type="radio"
+            value="turno"
+            id="manha"
+            name="turno"
+            >
+            <label>Manha</label>
+
+            <input 
+            type="radio"
+            value="turno"
+            id="tarde"
+            name="turno"
+            >
+            <label>Tarde</label>
+            <br>
+
+            <p>Matérias favoritas:</p>
+            <input 
+            type="checkbox"
+            id="html"
+            name="materias"
+            value="html"
+            >
+            <label for="html">HTML</label>
+            <input 
+            type="checkbox"
+            id="php"
+            name="materias"
+            value="php"
+            >
+            <label for="php">PHP</label>
+            <br>
+
+            <label for="curso">Curso:</label>
+            <select name="curso" id="curso">
+                <option value="">Selecione</option>
+                <option value="dev">Desenvolvimento de Sistemas</option>
+                <option value="mecatronica">Mecatrônica</option>
+                <option value="automacao">Automação</option>
+            </select>
+            <br>
+
+            <label for="mensagem">Mensagem:</label>
+            <br>
+            <textarea
+            name="mensagem"
+            id="mensagem"
+            placeholder="Escreva sua mensagem"
+            rows="5"
+            cols="40px"
+            ></textarea>
+            <!-- rows  indica a quantidade de linhas do texto -->
+            <br>
+
+            <button type="submit">Enviar cadasto</button>
+            <button type="reset">Resetar o preenchimento</button>
+
+   </form>
+
+</body>
 </html>
